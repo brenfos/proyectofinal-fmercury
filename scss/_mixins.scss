@@ -2,9 +2,16 @@
     
         height: 100vh;
         width: 95vw;
-        background-image: url("../media/background.webp");
-}
+        background-image: url("../media/background.webp"); 
+        background-image: no-repeat;
 
+        @media (max-width:500px){
+    
+        
+        background-image: linear-gradient(to left,violet, rgb(70, 0, 123));
+    
+}
+}
 
 @mixin breadcrumb {
     nav ol{
@@ -73,12 +80,17 @@
   }    
 }
 
-@media (max-width:768px) {
+@media (max-width:992px) {
+
+  
     .navbar-collapse {
         background-image: linear-gradient(to right,violet, rgb(70, 0, 123));
         z-index: 9999;
         border-radius: $borde;
     }
+    .navbar-toggler {
+        background-color: map-get($colores, "violeta" );
+        border-color: map-get($colores, "violeta" );      }
 }
 }
 
@@ -118,7 +130,10 @@
     }
 
 }
+
 @media (min-width: 800px) {
+
+    
     .card {
         width: 20rem;
     }

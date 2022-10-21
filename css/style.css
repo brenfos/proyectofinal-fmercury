@@ -2,6 +2,13 @@ body {
   height: 100vh;
   width: 95vw;
   background-image: url("../media/background.webp");
+  background-image: no-repeat;
+}
+@media (max-width: 500px) {
+  body {
+    background-image: -webkit-gradient(linear, right top, left top, from(violet), to(rgb(70, 0, 123)));
+    background-image: linear-gradient(to left, violet, rgb(70, 0, 123));
+  }
 }
 body .error {
   margin-top: 70px;
@@ -56,12 +63,16 @@ header div nav div div .navbar-nav > li {
   padding-left: 2em;
   padding-right: 1em;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   header .navbar-collapse {
     background-image: -webkit-gradient(linear, left top, right top, from(violet), to(rgb(70, 0, 123)));
     background-image: linear-gradient(to right, violet, rgb(70, 0, 123));
     z-index: 9999;
     border-radius: 30px;
+  }
+  header .navbar-toggler {
+    background-color: rgb(56, 36, 107);
+    border-color: rgb(56, 36, 107);
   }
 }
 
