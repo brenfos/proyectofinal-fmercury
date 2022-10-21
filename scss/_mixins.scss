@@ -1,0 +1,269 @@
+@mixin vista{
+    
+        height: 100vh;
+        width: 95vw;
+        background-image: url("../media/background.webp");
+}
+
+
+@mixin breadcrumb {
+    nav ol{
+        margin-left: 10%;
+        text-decoration: none;
+        text-align: center;
+        font-family: $fuente;
+        font-size: $tamañofuente - 4;
+      
+             }
+       a{
+        text-decoration: none;
+        color: map-get($colores, "especial");
+        &:hover{
+            @include anim_hover_color;
+        }
+    }
+    .breadcrumb-item.active{
+        color: map-get($colores, "rosa");
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before{
+        color: map-get($colores, "blanco");
+    }
+}
+
+@mixin anim_hover {
+    transform: scale(1.2);
+    transition: transform 1s;
+    
+}
+
+@mixin anim_hover_color {
+    color: map-get($colores, "rosa");
+}
+
+
+@mixin padding{
+    padding-left:2em;
+    padding-right:1em;
+}
+
+@mixin menu{
+    height: 20vh;
+      
+        div{                   
+         nav{    
+          div{
+            a{
+              font-family: $fuente;
+              color: map-get($colores, "blanco");
+              &:hover{
+                @include anim_hover;
+                background-color: map-get($colores, "violeta");
+                border-radius: $borde;
+             }  
+        }
+           
+             div{
+                .navbar-nav > li{
+                    @include padding;
+             }
+
+            }
+        }
+  }    
+}
+
+@media (max-width:768px) {
+    .navbar-collapse {
+        background-image: linear-gradient(to right,violet, rgb(70, 0, 123));
+        z-index: 9999;
+        border-radius: $borde;
+    }
+}
+}
+
+@mixin tarjeta{
+    .card{
+        border-radius:20px;
+        border: $borde -15;
+        border-color: map-get($colores, "rosa");
+        background-color: map-get($colores, "negro");
+        
+        &:hover{
+        box-shadow: 5px 5px 5px rgb(221, 221, 221);
+        background-color: map-get($colores, "violeta");
+        }
+        img{
+             border-radius:$borde*6;
+          
+        }
+        .card-title{
+           font-family: $fuente;
+           &:hover{
+            @include anim_hover;
+           }
+           color: map-get($colores, "blanco");
+           font-size: $tamañofuente+2;
+           
+        }
+       a{
+        font-family: $fuente2;
+        font-size: $tamañofuente - 2;
+       }
+       .btn{
+        background-color: map-get($colores, "rosa");
+        color: black;
+        font-family: $fuente2;
+        
+    }
+
+}
+@media (min-width: 800px) {
+    .card {
+        width: 20rem;
+    }
+}
+}
+
+
+
+@mixin texto{
+    color: map-get($colores, "especial");
+    text-align: justify;
+    font-size: $tamañofuente;
+    font-family: $fuente2;
+}
+
+@mixin carrusel{
+    .carousel-inner>.carousel-item>img, .carousel-inner>.carousel-item>a>img, .carousel-inner>.carousel-item>p {
+        display: block;
+        height: auto;
+        max-width: 70%;
+        line-height: 1;
+        margin:auto;
+        border-radius: $borde+10;
+        
+        }
+    div p{
+
+        font-family: $fuente2;
+        color: map-get($colores, "negro");
+        background-color: rgb(255, 255, 255, .40);
+        border-radius: $borde - 25;
+    }
+}
+
+
+@mixin tabla{
+    table{
+    background-color: rgba(119, 7, 156, 0.3);
+      thead th {
+       color: map-get($colores, "rosa");
+       
+        font-family: $fuente;
+        font-size: $tamañofuente - 2;
+        &:hover{
+            @include anim_hover_color;
+        }
+     }
+        th, td{
+        color: map-get($colores, "especial");
+        font-family: $fuente2;
+        font-size: $tamañofuente - 4;
+       
+        &:hover{
+            @include anim_hover_color;
+        }
+    }
+    }
+
+    .table>:not(:first-child) {
+        border-top: 0px;
+    }
+}
+
+@mixin formulario{
+    input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -4px;
+        left: -1px;
+        position: relative;
+        background-color: map-get($colores, "violetin");
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+    .btn{
+        background-color: map-get($colores, "negro");
+        color: map-get($colores, "rosa");
+    }
+}
+
+
+    
+@mixin footer{
+    h5{
+        font-family: $fuente2;
+        color: map-get($colores, "negro");
+        font-size: $tamañofuente - 2;
+       }
+}
+
+
+@mixin error{
+    
+    .error{
+        margin-top: 70px;
+        text-align: center;
+        font-family:'Courier New', Courier, monospace;
+        color: map-get($colores, "negro" );
+        h1{
+            font-size: $tamañofuente+20;
+        }
+        p{
+        font-size: $tamañofuente;
+        }
+    }
+    aside{
+        text-align: center;
+    img{
+        max-width: 200px;
+        
+    }
+    }
+
+   .btn_uno{
+    font-family:'Courier New', Courier, monospace;
+    font-size: $tamañofuente;
+    background-color: map-get($colores, "negro");
+    color: map-get($colores, "blanco");
+    border-radius: $borde - 10;
+   }
+   .return{
+    text-align: center;
+   }
+   section a{
+    text-decoration: none;
+   }
+}
+
+
+@mixin footer_img{
+    
+.ig{
+
+   -webkit-transition: all 0.5s ease-out;
+   -moz-transition: all 0.5s ease;
+   -o-transition: all 0.5s ease;
+}
+ 
+img:hover {
+  -webkit-transform: rotate(-7deg);
+  -moz-transform: rotate(-7deg);
+  -o-transform: rotate(-7deg);
+    }
+}

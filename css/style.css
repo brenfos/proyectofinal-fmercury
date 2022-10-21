@@ -1,0 +1,206 @@
+body {
+  height: 100vh;
+  width: 95vw;
+  background-image: url("../media/background.webp");
+}
+body .error {
+  margin-top: 70px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(0, 0, 0);
+}
+body .error h1 {
+  font-size: 36px;
+}
+body .error p {
+  font-size: 16px;
+}
+body aside {
+  text-align: center;
+}
+body aside img {
+  max-width: 200px;
+}
+body .btn_uno {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 20px;
+}
+body .return {
+  text-align: center;
+}
+body section a {
+  text-decoration: none;
+}
+
+header {
+  height: 20vh;
+}
+header div nav div a {
+  font-family: "Aboreto", cursive;
+  color: white;
+}
+header div nav div a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  background-color: rgb(56, 36, 107);
+  border-radius: 30px;
+}
+header div nav div div .navbar-nav > li {
+  padding-left: 2em;
+  padding-right: 1em;
+}
+@media (max-width: 768px) {
+  header .navbar-collapse {
+    background-image: -webkit-gradient(linear, left top, right top, from(violet), to(rgb(70, 0, 123)));
+    background-image: linear-gradient(to right, violet, rgb(70, 0, 123));
+    z-index: 9999;
+    border-radius: 30px;
+  }
+}
+
+main .text, main #textbio {
+  color: aliceblue;
+  text-align: justify;
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+main #textbio {
+  font-size: 13px;
+}
+main .carousel-inner > .carousel-item > img, main .carousel-inner > .carousel-item > a > img, main .carousel-inner > .carousel-item > p {
+  display: block;
+  height: auto;
+  max-width: 70%;
+  line-height: 1;
+  margin: auto;
+  border-radius: 40px;
+}
+main div p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+}
+main table {
+  background-color: rgba(119, 7, 156, 0.3);
+}
+main table thead th {
+  color: rgb(255, 184, 232);
+  font-family: "Aboreto", cursive;
+  font-size: 14px;
+}
+main table thead th:hover {
+  color: rgb(255, 184, 232);
+}
+main table th, main table td {
+  color: aliceblue;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 12px;
+}
+main table th:hover, main table td:hover {
+  color: rgb(255, 184, 232);
+}
+main .table > :not(:first-child) {
+  border-top: 0px;
+}
+main nav ol {
+  margin-left: 10%;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Aboreto", cursive;
+  font-size: 12px;
+}
+main a {
+  text-decoration: none;
+  color: aliceblue;
+}
+main a:hover {
+  color: rgb(255, 184, 232);
+}
+main .breadcrumb-item.active {
+  color: rgb(255, 184, 232);
+}
+main .breadcrumb-item + .breadcrumb-item::before {
+  color: white;
+}
+main .card {
+  border-radius: 20px;
+  border: 30px -15;
+  border-color: rgb(255, 184, 232);
+  background-color: rgb(0, 0, 0);
+}
+main .card:hover {
+  -webkit-box-shadow: 5px 5px 5px rgb(221, 221, 221);
+          box-shadow: 5px 5px 5px rgb(221, 221, 221);
+  background-color: rgb(56, 36, 107);
+}
+main .card img {
+  border-radius: 180px;
+}
+main .card .card-title {
+  font-family: "Aboreto", cursive;
+  color: white;
+  font-size: 18px;
+}
+main .card .card-title:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+main .card a {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 14px;
+}
+main .card .btn {
+  background-color: rgb(255, 184, 232);
+  color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+@media (min-width: 800px) {
+  main .card {
+    width: 20rem;
+  }
+}
+main input[type=radio]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -4px;
+  left: -1px;
+  position: relative;
+  background-color: rgb(182, 85, 189);
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+main .btn {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 184, 232);
+}
+
+footer h5 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+}
+footer .ig {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+footer img:hover {
+  -webkit-transform: rotate(-7deg);
+  -moz-transform: rotate(-7deg);
+  -o-transform: rotate(-7deg);
+}
